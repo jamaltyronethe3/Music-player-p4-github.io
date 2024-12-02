@@ -17,19 +17,15 @@ void setup()
   String beatYourCompetition = "Beat_Your_Competition";
   String cycles = "Cycles";
   String eureka = "Eureka";
-  String ghostWalk = "Ghost_Walk";
-  String groove = "groove";
-  String newsroom = "Newsroom";
-  String startYourEngines = "Start_Your_Engines";
-  String theSimplest = "The_Simplest";
+  
   //
   //Add Reading into Array
   String directory = "../" + musicPathway;
   //println ( currentSong, directory );
-  String file = directory + groove + mp3FileName;
+  String file;
   println (file);
   //song[currentSong] = minim.loadFile( file );
-  file = directory + startYourEngines + mp3FileName;
+  
   println (file);
   //song[currentSong+=1] = minim.loadFile( file );
   //println( currentSong, song[currentSong] );
@@ -45,15 +41,15 @@ void setup()
   println (file);
   //song[currentSong+=1] = minim.loadFile( file );
   //println( currentSong, song[currentSong] );
-  file = directory + ghostWalk + mp3FileName;
+  
   println (file);
   //song[currentSong+=1] = minim.loadFile( file );
   //println( currentSong, song[currentSong] );
-  file = directory + newsroom + mp3FileName;
+ 
   println (file);
   //song[currentSong+=1] = minim.loadFile( file );
   //println( currentSong, song[currentSong] );
-  file = directory + theSimplest + mp3FileName;
+  
   println (file);
   //song[currentSong+=1] = minim.loadFile( file );
   //println( currentSong, song[currentSong] );
