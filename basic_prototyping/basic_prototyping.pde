@@ -4,6 +4,13 @@ import ddf.minim.effects.*;
 import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
+//
+//globel veriables 
+Minim minim;
+int numberOfSongs = 3; //Able to Autodetect based on Pathway
+AudioPlayer[] song = new AudioPlayer[numberOfSongs];
+int currentSong = numberOfSongs - numberOfSongs;  //beginning current song as ZERO
+//
 void setup()
 {
    size(900, 800);
@@ -17,50 +24,18 @@ void setup()
   String beatYourCompetition = "Beat_Your_Competition";
   String cycles = "Cycles";
   String eureka = "Eureka";
-  
   //
   //Add Reading into Array
   String directory = "../" + musicPathway;
-  //println ( currentSong, directory );
   String file;
-  println (file);
-  //song[currentSong] = minim.loadFile( file );
-  
-  println (file);
-  //song[currentSong+=1] = minim.loadFile( file );
-  //println( currentSong, song[currentSong] );
   file = directory + beatYourCompetition + mp3FileName;
-  println (file);
-  //song[currentSong+=1] = minim.loadFile( file );
-  //println( currentSong, song[currentSong] );
+  song[currentSong] = minim.loadFile( file );
   file = directory + cycles + mp3FileName;
-  println (file);
-  //song[currentSong+=1] = minim.loadFile( file );
-  //println( currentSong, song[currentSong] );
+song[currentSong+=1] = minim.loadFile( file );
   file = directory + eureka + mp3FileName;
-  println (file);
-  //song[currentSong+=1] = minim.loadFile( file );
-  //println( currentSong, song[currentSong] );
-  
-  println (file);
-  //song[currentSong+=1] = minim.loadFile( file );
-  //println( currentSong, song[currentSong] );
- 
-  println (file);
-  //song[currentSong+=1] = minim.loadFile( file );
-  //println( currentSong, song[currentSong] );
-  
-  println (file);
-  //song[currentSong+=1] = minim.loadFile( file );
-  //println( currentSong, song[currentSong] );
+  song[currentSong+=1] = minim.loadFile( file );
   //
-  //currentSong = 0;
-  //
-  //song[currentSong].play();
-  //Use play(timeStart) & loop(numberOfLoops)
-  //Purpose is 2D Shapes
-  //Introduce keyPressed as keyboard shortcuts
-  //Introduce mousePressed as interaction
+  currentSong = 0;
   //
   //DIVs
   //rect() based on variables; variables change with program (introduces parameters of a function and TABS)
